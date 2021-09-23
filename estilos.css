@@ -10,7 +10,7 @@ and open the template in the editor.
 
 .container {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1.8fr 0.2fr;
     grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
     gap: 0px 0px;
     grid-auto-flow: row;
@@ -25,7 +25,7 @@ and open the template in the editor.
 .header { 
 
     grid-area: header;  
-    border: 3px green solid;
+    border: 1px black solid;
 }
 
 .vertical_navbar {
@@ -37,27 +37,27 @@ and open the template in the editor.
         "sup_navbar"
         "inf_navbar"; 
     grid-area: vertical_navbar; 
-    border: 3px green solid;
+   border: 1px black solid;
 
 }
 
 .sup_navbar { 
     text-align: center;
-    border: 3px green solid;
+   border: 1px black solid;
     grid-area: sup_navbar; 
 }
 .inf_navbar { 
     text-align: center;
-    border: 3px green solid;
+    border: 1px black solid;
     grid-area: inf_navbar; 
 }
 
 .section { 
-    border: 3px green solid;
+    border: 1px black solid;
     grid-area: section; 
 }
 
 .footer { 
-    border: 3px green solid;
+    border: 1px black solid;
     grid-area: footer; 
 }
