@@ -1,39 +1,130 @@
 <!DOCTYPE html>
+<html lang="en">
 
-<html>
-    <head>
-        <title>Registros Sprint 1</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="estilos.css"/>
-        <!-- comment
-        <script src="scriptsSprint.js"></script>
-        -->
-        
-        
-    </head>
-    <body>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <link rel="stylesheet" href="estilos.css" />
+
+    <title>Jacks Dev Group</title>
+</head>
+
+<body class="">
+
+    <header>
+
+        <nav id="vertical_navbar" class="navbar navbar-dark bg-dark fixed-top">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">Jacks Dev Group</a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="offcanvas offcanvas-end bg-dark" tabindex="-1" id="offcanvasNavbar"
+                    aria-labelledby="offcanvasNavbarLabel">
+
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title text-white" id="offcanvasNavbarLabel">Menú Prncipal</h5>
+                        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
+                            aria-label="Close"></button>
+                    </div>
+                    <img id="logo_navbar" src="jd-icon.jpg" alt="">
+                    <div class="offcanvas-body">
+                        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+
+                            <li id="btn_Registro" class="nav-item">
+                                <a id="link_Registro" class="nav-link active" aria-current="page" href="registro.html">Registrarse</a>
+                            </li>
+
+                            <!-- <li class="nav-item">
+                                <a class="nav-link" href="#">Link</a>
+                            </li>
+                            
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="offcanvasNavbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Dropdown
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="offcanvasNavbarDropdown">
+                                    <li><a class="dropdown-item" href="#">Action</a></li>
+                                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                </ul>
+                            </li> -->
+                        </ul>
+                        <!-- <form class="d-flex">
+                            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                            <button class="btn btn-outline-success">
+                                <a id="link_Registro" href="registro.html">Registro</a>
+                            </button>
+                        </form> -->
+                    </div>
+                </div>
+            </div>
+        </nav>        
+    </header>
+
+    <main class="pt-4">
+
         <section>
-         <h2>Pagina de registro de USUARIOS</h2>
-        
-        <form id="form_registrarse" class="formulario">
-            <h2 id="TituloRegistro"> Registro usuarios </h2>
-            <br>
-            <hr>
-            <h3>Nombre Usuario</h3>
-            <label for="in_nombre_usuario"> Nombre Nuevo Usuario
-            <input id="in_nombre_usuario" type="text" placeholder="Escribe tu nombre"/>
-            </label>
-            <hr>
-            <h3> Registro Contraseña </h3>
-            <input id="in_contrasena" type="password"/>
-            <hr>
-            <h3> Confirmacion contraseña </h3>
-            <input id="in_confirmar_contrasena" type="password" />
-            <hr>
-            <button id="btn_registrar_usuario" onclick="validar_nombre_usuario()"> Enviar </button>
-        </form>
-        </section>
-        <script src="scriptsSprint.js"> </script>
-    </body>
+            <div class="container col-md-4 pt-5">
+
+                <form id="form_registrarse">
+                    <div class="mb-3">
+                        <label for="in_nombre_usuario" class="form-label">Nombre de usuario</label>
+                        <input type="email" class="form-control" id="in_nombre_usuario" aria-describedby="emailHelp">
+                        <!-- <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div> -->
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="in_contrasena" class="form-label">Escriba su contraseña</label>
+                        <input type="password" class="form-control" id="in_contrasena">
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="in_confirmar_contrasena" class="form-label">Confirme su contrasena</label>
+                        <input type="password" class="form-control" id="in_confirmar_contrasena">
+                    </div>
+
+                    <div class="mb-3 form-check">
+                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                        <label class="form-check-label" for="exampleCheck1">Aceptar terminos y condiciones</label>
+                    </div>
+                    
+                    <button id="btn_registrar_usuario" type="submit" class="btn btn-primary">Registrarse</button>
+                    <a class="btn btn-primary" href="/">
+                        Cancelar
+                    </a>
+                </form>
+            </section>
+        </div>
+
+
+    </main>
+
+    <aside>
+
+    </aside>
+
+    <footer>
+
+    </footer>
+
+
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+        crossorigin="anonymous"></script>
+
+</body>
+
 </html>
