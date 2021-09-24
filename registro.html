@@ -5,20 +5,24 @@
         <title>Registros Sprint 1</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="estilos.css"/>
     </head>
     <body>
         <section>
-         <h1>Titulo de la pagina de contenido</h1>
-         <hr>
-        <div>Registros Sprint 1</div>
-        <hr>
-        <form id="form_registrarse">
-            <h2> Registro usuarios </h2>
+         <h2>Pagina de registro de USUARIOS</h2>
+        
+        <form id="form_registrarse" class="formulario">
+            <h2 id="TituloRegistro"> Registro usuarios </h2>
+            <br>
             <hr>
-            <input id="in_nombre_usuario" type="text"/>
+            <h3>Nombre Usuario</h3>
+            <input id="in_nombre_usuario" type="text" required pattern="[a-z] {5}" title="El formato debe conicidir con :"/>
+            <script src="scriptsSprint.js"> </script>
             <hr>
+            <h3> Registro Contraseña </h3>
             <input id="in_contrasena" type="password"/>
             <hr>
+            <h3> Confirmacion contraseña </h3>
             <input id="in_confirmar_contrasena" type="password" />
             <hr>
             <button id="btn_registrar_usuario" > Enviar </button>

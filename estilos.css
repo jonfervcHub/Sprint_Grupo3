@@ -61,3 +61,11 @@ and open the template in the editor.
     border: 1px black solid;
     grid-area: footer; 
 }
+
+.formulario{
+    border: 1px black solid;
+}
+
+#TituloRegistro{
+    text-align: center;
+}
