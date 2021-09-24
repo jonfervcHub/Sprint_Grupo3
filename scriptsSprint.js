@@ -1,22 +1,17 @@
-/* 
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-//var document = "registro.html";
 
 
-
-
-console.log("prueba");
-/*function validar_nombre_usuario(nombre_usuario){
-
- var tamaño_nombreUsuario = nombre_usuario.length;
- 
-    console.log(tamaño_nombreUsuario);
-    
-    if(){
-        
+function validar_nombre_usuario(){
+    var nombreU = document.getElementById("in_nombre_usuario");
+    var cantidadCaracteres = nombreU.length;
+    console.log(cantidadCaracteres);
+    if (nombreU.length>2 ) {
+        console.log("cumple");
+    } else {
+        console.log("no cumple")
     }
-    
-}*/
+}
+/*var nombreU = document.getElementById("in_nombre_usuario");
+    var cantidadCaracteres = nombreU.length;*/
+function ejecucionButton(){
+    console.log("click");
+    }

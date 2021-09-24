@@ -6,6 +6,10 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="estilos.css"/>
+        <!-- comment -->
+        <script src="scriptsSprint.js"></script>
+        
+        
     </head>
     <body>
         <section>
@@ -16,8 +20,7 @@
             <br>
             <hr>
             <h3>Nombre Usuario</h3>
-            <input id="in_nombre_usuario" type="text" required pattern="[a-z] {5}" title="El formato debe conicidir con :"/>
-            <script src="scriptsSprint.js"> </script>
+            <input id="in_nombre_usuario" type="text"/>
             <hr>
             <h3> Registro Contraseña </h3>
             <input id="in_contrasena" type="password"/>
@@ -25,7 +28,7 @@
             <h3> Confirmacion contraseña </h3>
             <input id="in_confirmar_contrasena" type="password" />
             <hr>
-            <button id="btn_registrar_usuario" > Enviar </button>
+            <button id="btn_registrar_usuario" onclick="ejecucionButton()"> Enviar </button>
         </form>
         </section>
     </body>
