@@ -81,18 +81,27 @@
                 <form id="form_registrarse">
                     <div class="mb-3">
                         <label for="in_nombre_usuario" class="form-label">Nombre de usuario</label>
-                        <input type="email" class="form-control" id="in_nombre_usuario" aria-describedby="emailHelp">
+                        <input type="text" class="form-control" id="in_nombre_usuario" required>
                         <!-- <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div> -->
+                        <div id="errorUserName" class="form-text">
+                            Debe contener entre 6 y 30 caracteres<br>Solo permite letras (a-z) no distingue de mayusculas y/o minusculas
+                        </div>
                     </div>
 
                     <div class="mb-3">
                         <label for="in_contrasena" class="form-label">Escriba su contraseña</label>
-                        <input type="password" class="form-control" id="in_contrasena">
+                        <input type="password" class="form-control" id="in_contrasena" required>
+                        <div id="errorPassword" class="form-text">
+                            Debe contener 6 o más caracteres<br>Solo permite caracteres alfanumericos (a-z / 0-9) no distingue de mayusculas y/o minusculas
+                        </div>
                     </div>
 
                     <div class="mb-3">
                         <label for="in_confirmar_contrasena" class="form-label">Confirme su contrasena</label>
-                        <input type="password" class="form-control" id="in_confirmar_contrasena">
+                        <input type="password" class="form-control" id="in_confirmar_contrasena" required>
+                        <div id="errorPasswordConfirm" class="form-text">
+                            Las contraseñas no coinciden.
+                        </div>
                     </div>
 
                     <div class="mb-3 form-check">
@@ -122,6 +131,9 @@
 
     <!-- JavaScript Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+
+    <script src="validaciones.js"></script>
+    <script src="regEx.js"></script>
 
 </body>
 

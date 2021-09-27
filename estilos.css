@@ -3,3 +3,12 @@
     background-repeat: no-repeat;
 	background-size: cover;
 }
+
+.form-text{
+    display: none;
+}
+
+.validation__message{
+    display: unset;
+    color: darksalmon;
+}
