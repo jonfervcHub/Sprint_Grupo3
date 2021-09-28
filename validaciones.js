@@ -18,7 +18,7 @@ form_registrarse.addEventListener('submit', (eventObject)=> {
     }
 });
 
-in_nombre_usuario.addEventListener('blur', (eventObject) => {
+in_nombre_usuario.addEventListener('blur', () => {
     if (validar_nombre_usuario(in_nombre_usuario.value)){
         errorUserName.classList.remove('validation__message')
     } else {
@@ -26,7 +26,7 @@ in_nombre_usuario.addEventListener('blur', (eventObject) => {
     }
 });
 
-in_contrasena.addEventListener('blur', (eventObject) => {
+in_contrasena.addEventListener('blur', () => {
     if (validar_contrasena(in_contrasena.value)){
         errorPassword.classList.remove('validation__message')
     } else {
@@ -34,13 +34,15 @@ in_contrasena.addEventListener('blur', (eventObject) => {
     }
 });
 
-in_confirmar_contrasena.addEventListener('blur', (eventObject) => {
+in_confirmar_contrasena.addEventListener('blur', () => {
     if (confirmar_contrasena(in_contrasena.value, in_confirmar_contrasena.value)){
         errorPasswordConfirm.classList.remove('validation__message')
     } else {
         errorPasswordConfirm.classList.add('validation__message')
     }
 });
+
+// Montar en el codegrade deaqui en adelante
 
 function validar_nombre_usuario(string){
     /*
@@ -75,6 +77,7 @@ function validar_contrasena(string){
         return false;
     }
 }
+
 
 function confirmar_contrasena(stringA, stringB){
     if (stringA === stringB){
