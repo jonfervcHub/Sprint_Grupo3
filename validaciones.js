@@ -12,13 +12,14 @@ form_registrarse.addEventListener('submit', (eventObject) => {
     if (validar_nombre_usuario(in_nombre_usuario.value) &&
             validar_contrasena(in_contrasena.value) &&
             confirmar_contrasena(in_contrasena.value, in_confirmar_contrasena.value))
+
     {
-        alert('Registro Exitoso!')
+        agregarRegistro();
+        OrdenarArreglo(registros);
+        alert('Registro Exitoso!');
     } else {
-        alert('Registro No Exitoso!')
+        alert('Campos INCORRECTOS!, verifique instructivo de campo');
     }
-    agregarRegistro();
-    OrdenarArreglo(registros);
 });
 
 in_nombre_usuario.addEventListener('blur', () => {
@@ -101,29 +102,29 @@ function agregarRegistro() {
     const contrasena = in_contrasena.value;
     const confirmar_contrasena = in_confirmar_contrasena.value;
 
-    nuevoUsuario = new Persona(usuario,contrasena,confirmar_contrasena);
+    nuevoUsuario = new Persona(usuario, contrasena, confirmar_contrasena);
     /*console.log(nuevoUsuario);*/
-    
+
     registros.push(nuevoUsuario);
     console.log(registros);
 
 }
-function OrdenarArreglo(arreglo){
-    arreglo = arreglo.sort(function(a,b){
+function OrdenarArreglo(arreglo) {
+    arreglo = arreglo.sort(function (a, b) {
         if (a.usuario > b.usuario) {
-    return 1;
-  }
-  if (a.usuario < b.usuario) {
-    return -1;
-  }
-  // a must be equal to b
-  return 0;
+            return 1;
+        }
+        if (a.usuario < b.usuario) {
+            return -1;
+        }
+        // a must be equal to b
+        return 0;
     });
-    
-  /*  for(i in arreglo){
-       console.log(arreglo[i].usuario);  
-    }*/
-   console.log(arreglo);
+
+    /*  for(i in arreglo){
+     console.log(arreglo[i].usuario);  
+     }*/
+    console.log(arreglo);
 }
 module.exports.validar_nombre_usuario = validar_nombre_usuario;
 module.exports.validar_contrasena = validar_contrasena;
