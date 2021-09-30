@@ -5,7 +5,7 @@ const in_confirmar_contrasena = document.getElementById('in_confirmar_contrasena
 const errorUserName = document.getElementById('errorUserName');
 const errorPassword = document.getElementById('errorPassword');
 const errorPasswordConfirm = document.getElementById('errorPasswordConfirm');
-
+let registros = [];
 
 form_registrarse.addEventListener('submit', (eventObject) => {
     eventObject.preventDefault();
@@ -18,6 +18,7 @@ form_registrarse.addEventListener('submit', (eventObject) => {
         alert('Registro No Exitoso!')
     }*/
     agregarRegistro();
+    OrdenarArreglo(registros);
 });
 
 in_nombre_usuario.addEventListener('blur', () => {
@@ -96,13 +97,36 @@ function agregarRegistro() {
         this.confirmar_contrasena = confirmar_contrasena;
     }
     //Variables Sprint 3
-    const  usuario = in_nombre_usuario.value;
+    const usuario = in_nombre_usuario.value;
     const contrasena = in_contrasena.value;
     const confirmar_contrasena = in_confirmar_contrasena.value;
 
-    const nuevoUsuario = new Persona(usuario,contrasena,confirmar_contrasena);
-    console.log(nuevoUsuario);
+    nuevoUsuario = new Persona(usuario,contrasena,confirmar_contrasena);
+    /*console.log(nuevoUsuario);*/
+    
+    registros.push(nuevoUsuario);
+    console.log(registros);
+
+}
+function OrdenarArreglo(arreglo){
+    arreglo = arreglo.sort(function(a,b){
+        if (a.usuario > b.usuario) {
+    return 1;
+  }
+  if (a.usuario < b.usuario) {
+    return -1;
+  }
+  // a must be equal to b
+  return 0;
+    });
+    
+  /*  for(i in arreglo){
+       console.log(arreglo[i].usuario);  
+    }*/
+   console.log(arreglo);
 }
 module.exports.validar_nombre_usuario = validar_nombre_usuario;
 module.exports.validar_contrasena = validar_contrasena;
 module.exports.confirmar_contrasena = confirmar_contrasena;
+
+
