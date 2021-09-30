@@ -9,14 +9,14 @@ let registros = [];
 
 form_registrarse.addEventListener('submit', (eventObject) => {
     eventObject.preventDefault();
-    /*if (validar_nombre_usuario(in_nombre_usuario.value) &&
+    if (validar_nombre_usuario(in_nombre_usuario.value) &&
             validar_contrasena(in_contrasena.value) &&
             confirmar_contrasena(in_contrasena.value, in_confirmar_contrasena.value))
     {
         alert('Registro Exitoso!')
     } else {
         alert('Registro No Exitoso!')
-    }*/
+    }
     agregarRegistro();
     OrdenarArreglo(registros);
 });
