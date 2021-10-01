@@ -1,0 +1,36 @@
+.parent {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 20px;
+    grid-row-gap: 0px;
+    }
+
+    .div1 { grid-area: 1 / 1 / 2 / 2; }
+    .div2 { grid-area: 1 / 2 / 2 / 3; }
+
+    img {
+      width: 100%;  
+    } 
+
+    body {
+      font-family: 'Semi-bold 600'; 
+     
+    }
+
+    #titulo {
+
+     margin-top: 42px;
+     margin-right: 34px;
+     margin-bottom: 40px;
+     margin-left: 580px;
+
+    }
+    
+    .parrafo{
+       
+       with: 250px;
+       height: 100px;
+       padding: 10px 50px 50px 30px;
+       text-align: justify;
+     } 
