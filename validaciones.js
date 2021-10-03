@@ -5,17 +5,16 @@ const in_confirmar_contrasena = document.getElementById('in_confirmar_contrasena
 const errorUserName = document.getElementById('errorUserName');
 const errorPassword = document.getElementById('errorPassword');
 const errorPasswordConfirm = document.getElementById('errorPasswordConfirm');
-let registros = [];
 
 form_registrarse.addEventListener('submit', (eventObject) => {
     eventObject.preventDefault();
     if (validar_nombre_usuario(in_nombre_usuario.value) &&
-            validar_contrasena(in_contrasena.value) &&
+    validar_contrasena(in_contrasena.value) &&
             confirmar_contrasena(in_contrasena.value, in_confirmar_contrasena.value))
 
-    {
-        agregarRegistro();
-        OrdenarArreglo(registros);
+            {
+                agregarRegistro();
+                OrdenarArreglo(registros);
         alert('Registro Exitoso!');
     } else {
         alert('Campos INCORRECTOS!, verifique instructivo de campo');
@@ -46,19 +45,19 @@ in_confirmar_contrasena.addEventListener('blur', () => {
     }
 });
 
-// Montar en el codegrade deaqui en adelante
+// Montar en el codegrade deaqui en adelante para el sprint 2
 
 function validar_nombre_usuario(string) {
     /*
-     Author: jhonjgonzalezt@gmail.com
-     Function: validateUsername(string) || validar_nombre_usuario(string)
-     Parameter: string
-     Description: Not case sensitive, this function validates that a username meets the following conditions:
-     1. It must be between 6 and 30 characters.
-     2. It can only contain characters only letters from A to Z, they can be both uppercase and lowercase.
-     */
-    const regEx = /^[a-zA-Z]{6,30}$/
-    if (regEx.test(string)) {
+    Author: jhonjgonzalezt@gmail.com
+    Function: validateUsername(string) || validar_nombre_usuario(string)
+    Parameter: string
+    Description: Not case sensitive, this function validates that a username meets the following conditions:
+    1. It must be between 6 and 30 characters.
+    2. It can only contain characters only letters from A to Z, they can be both uppercase and lowercase.
+    */
+   const regEx = /^[a-zA-Z]{6,30}$/
+   if (regEx.test(string)) {
         return true;
     } else {
         return false;
@@ -67,7 +66,7 @@ function validar_nombre_usuario(string) {
 
 function validar_contrasena(string) {
     /*
-     Author: jhonjgonzalezt@gmail.com
+    Author: jhonjgonzalezt@gmail.com
      Function: validateUsername(string) || validar_contrasena(string)
      Parameter: string
      Description: Not case sensitive, this function validates that a username meets the following conditions:
@@ -82,7 +81,6 @@ function validar_contrasena(string) {
     }
 }
 
-
 function confirmar_contrasena(stringA, stringB) {
     if (stringA === stringB) {
         return true;
@@ -90,25 +88,28 @@ function confirmar_contrasena(stringA, stringB) {
         return false;
     }
 }
-//Funciones Sprint 3
+
+// Montar en el codegrade deaqui en adelante para el sprint 3
+
+let registros = [];
+
 function agregarRegistro() {
     function Persona(usuario, contrasena, confirmar_contrasena) {
         this.usuario = usuario;
         this.contrasena = contrasena;
         this.confirmar_contrasena = confirmar_contrasena;
     }
-    //Variables Sprint 3
+
     const usuario = in_nombre_usuario.value;
     const contrasena = in_contrasena.value;
     const confirmar_contrasena = in_confirmar_contrasena.value;
 
     nuevoUsuario = new Persona(usuario, contrasena, confirmar_contrasena);
-    /*console.log(nuevoUsuario);*/
 
     registros.push(nuevoUsuario);
     console.log(registros);
-
 }
+
 function OrdenarArreglo(arreglo) {
     arreglo = arreglo.sort(function (a, b) {
         if (a.usuario > b.usuario) {
@@ -117,17 +118,16 @@ function OrdenarArreglo(arreglo) {
         if (a.usuario < b.usuario) {
             return -1;
         }
-        // a must be equal to b
         return 0;
     });
 
-    /*  for(i in arreglo){
-     console.log(arreglo[i].usuario);  
-     }*/
     console.log(arreglo);
+    return arreglo;
 }
 module.exports.validar_nombre_usuario = validar_nombre_usuario;
 module.exports.validar_contrasena = validar_contrasena;
 module.exports.confirmar_contrasena = confirmar_contrasena;
 
-
+module.exports.registros = registros;
+module.exports.OrdenarArreglo = OrdenarArreglo;
+module.exports.agregarRegistro = agregarRegistro;

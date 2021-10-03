@@ -28,8 +28,7 @@
     }
     
     .parrafo{
-       
-       with: 250px;
+       width: 250px;
        height: 100px;
        padding: 10px 50px 50px 30px;
        text-align: justify;
