@@ -1,1 +1,1 @@
-SELECT usuario, contrasena, fecha_registro FROM usuarios;
+SELECT usuario, contrasena FROM usuarios WHERE id BETWEEN 6 AND 10;

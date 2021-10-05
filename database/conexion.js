@@ -15,7 +15,7 @@ conexion.connect(function(err) {
 });
 
 
-conexion.query('SELECT usuario, contrasena FROM usuarios WHERE id BETWEEN 6 AND 10', function (error, results, fields) {
+conexion.query('SELECT * FROM usuarios ORDER BY usuario DESC LIMIT 5', function (error, results, fields) {
     if (error)
         throw error;
 
