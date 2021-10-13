@@ -1,9 +1,10 @@
+//Controlador
 var mysql = require('mysql');
 var conexion= mysql.createConnection({
     host : 'localhost',
     user : 'root',
-    password : 'Root-123',
-    database : 'Sprints_B4',
+    password : '',
+    database : 'DBSprint'
 });
 
 conexion.connect(function(err) {
@@ -13,9 +14,9 @@ conexion.connect(function(err) {
     }
     console.log('Conectado con el identificador ' + conexion.threadId);
 });
+//Controlador
 
-
-conexion.query('SELECT * FROM usuarios ORDER BY usuario DESC LIMIT 5', function (error, results, fields) {
+conexion.query('SELECT usuario, contrasena, fecha_registro FROM usuarios;', function (error, results, fields) {
     if (error)
         throw error;
 

@@ -13,7 +13,19 @@
   min-height: 0%;
   z-index: 0;
 }
-
+#fondo_img{
+    position: fixed;
+  left: 0;
+  top: 0;
+ 
+  min-width: 100%;
+  min-height: 0%;
+  z-index: 0;
+}
+#main_mision{
+    position: fixed;
+     z-index: 1;
+}
 .form-text{
     display: none;
 }
@@ -30,3 +42,5 @@
     position: fixed;
     
 }
+
+
